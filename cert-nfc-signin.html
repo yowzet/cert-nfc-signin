@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Opening CERT Sign-In Form</title></head>
+<body>
+<p>Opening CERT sign-in form...</p>
+<script>
+const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth()+1).padStart(2,"0");
+const day = String(now.getDate()).padStart(2,"0");
+const form = new URL("https://docs.google.com/forms/d/1An0fVNkjxHeCwaYsDR_s9kL9u0ai-brgFqhZgXYPh7I/viewform");
+form.searchParams.set("usp","pp_url");
+form.searchParams.set("entry.550418555","CERT Monthly Meeting");
+form.searchParams.set("entry.693351494","Donald");
+form.searchParams.set("entry.1328191353","Holman");
+form.searchParams.set("entry.1118275508","1900 (7:00pm)");
+form.searchParams.set("entry.1676471255","2000 (8:00pm)");
+form.searchParams.set("entry.1938323330_year",String(year));
+form.searchParams.set("entry.1938323330_month",month);
+form.searchParams.set("entry.1938323330_day",day);
+window.location.replace(form.toString());
+</script>
+</body>
+</html>
